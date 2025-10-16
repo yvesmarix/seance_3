@@ -17,23 +17,24 @@ namespace seance_3
             Solde += montant;
         }
 
-        public void Deposer(double montant)
+        public void Deposer(double montant, string? libelle = null)
         {
-            Mouvement(montant, "Depot");
+            Mouvement(montant, libelle == null ? "Depot" : libelle);
         }
 
 
-        public void Retrait(double montant)
+        public void Retrait(double montant, string? libelle = null)
         {
-            Mouvement(-montant, "Retrait");
+            Mouvement(-montant, libelle == null ? "Retrait" : libelle);
         }
 
-        public virtual void Virement(double montant, Compte destinataire)
+        public bool Virement(double montant, Compte destinataire)
         {
             if (Solde >= montant)
             {
-                Retrait(montant);
-                destinataire.Deposer(montant);
+                Retrait(montant, "Virement Sortant");
+                destinataire.Deposer(montant, "Virement Entrant");
+                return true;
             }
             else
                 throw new Exception("Le montant du virement est supérieur au solde du compte.");
