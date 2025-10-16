@@ -1,0 +1,105 @@
+# Ignorer fichiers non liés au code (OS, IDE, dépendances, builds, logs, caches, environnements)
+
+# Systèmes
+.DS_Store
+Thumbs.db
+desktop.ini
+.Trashes
+.Spotlight-V100
+
+# Logs et temporaires
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.pid
+*.seed
+*.lock
+*.bak
+*.orig
+
+# Node / JS
+node_modules/
+.pnp/
+.pnp.js
+.npm/
+.npmrc.lock
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Java / JVM
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+*csproj
+
+# C / C++
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+*.dylib
+
+# Go
+vendor/
+
+# Ruby
+.bundle/
+*.gem
+
+# Packaging / archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Coverage / test output
+coverage/
+.coverage
+.nyc_output/
+test-results/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sublime-workspace
+*.sublime-project
+
+# Cache and misc
+.cache/
+.cache-loader/
+.sass-cache/
+node-repl-history
+*.cache
